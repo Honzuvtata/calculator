@@ -5,7 +5,7 @@ from backend import CalculatorBackend
 
 # Create the main window
 root = tk.Tk()
-root.title("Simple Calculator")
+root.title("Calculator")
 root.geometry("400x500")
 
 # Instantiate the backend
