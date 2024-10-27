@@ -19,7 +19,16 @@
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/calculator_project.git
-   cd calculator_project
+
+2. **Navigate to the Project Directory**:
+    Change into the project directory that was created by the clone command:
+    ```bash
+    cd calculator_project
+
+3. **Run the Application**:
+    Start the calculator application by executing the following command:
+    ```bash
+    python src/main.py
 
 ### TODO: 
  - **Memory Functionality**: Allows users to store and recall previous calculations.
