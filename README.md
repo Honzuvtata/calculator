@@ -32,4 +32,5 @@
 
 ### TODO: 
  - **Memory Functionality**: Allows users to store and recall previous calculations.
- - **Error Handling**: Displays clear messages for invalid operations (e.g., division by zero).
+ - **Error Handling**: Displays clear messages for invalid operations (e.g., division by zero).*
+ - **Tests**: add tests
