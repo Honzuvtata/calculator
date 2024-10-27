@@ -30,7 +30,7 @@ def clear_expression():
     equation.set(result)
 
 # Create the display text entry box
-entry_box = tk.Entry(root, textvariable=equation, font=('arial', 20, 'bold'), bd=10, insertwidth=4, width=14, borderwidth=4)
+entry_box = tk.Entry(root, textvariable=equation, font=('arial', 25, 'bold'), bd=10, insertwidth=8, width=20, borderwidth=6)
 entry_box.grid(columnspan=4, padx=20, pady=20)
 
 # Create buttons for numbers and operations
