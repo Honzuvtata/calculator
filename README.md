@@ -23,7 +23,7 @@
 2. **Navigate to the Project Directory**:
     Change into the project directory that was created by the clone command:
     ```bash
-    cd calculator_project
+    cd calculator
 
 3. **Run the Application**:
     Start the calculator application by executing the following command:
