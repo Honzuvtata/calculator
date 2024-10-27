@@ -1,3 +1,3 @@
 # calculator
 
- ![calc](images\calc_pic.png)
+ ![calc](images/calc_pic.png)
