@@ -57,4 +57,5 @@ for i in range(5):
     root.grid_columnconfigure(i, weight=1)
 
 # Start the Tkinter event loop
-root.mainloop()
+if __name__ == "__main__":
+    root.mainloop()
