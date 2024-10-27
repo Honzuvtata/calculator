@@ -18,7 +18,7 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Honzuvtata/calculator_project.git
+   git clone https://github.com/Honzuvtata/calculator.git
 
 2. **Navigate to the Project Directory**:
     Change into the project directory that was created by the clone command:
