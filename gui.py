@@ -1,43 +1,37 @@
+# frontend.py
+
 import tkinter as tk
+from backend import CalculatorBackend
 
 # Create the main window
 root = tk.Tk()
 root.title("Simple Calculator")
 root.geometry("400x500")
 
-# Create a global variable for the expression string
-expression = ""
+# Instantiate the backend
+calc = CalculatorBackend()
 
-# Function to update expression in the text entry box
-def press(num):
-    global expression
-    expression += str(num)
+# Create a StringVar to hold the display value
+equation = tk.StringVar()
+
+# Function to update expression in the entry box when buttons are pressed
+def press_button(num):
+    expression = calc.press(num)
     equation.set(expression)
 
-# Function to evaluate the expression
-def equalpress():
-    global expression
-    try:
-        # Use eval to calculate the expression
-        result = str(eval(expression))
-        equation.set(result)
-        expression = result
-    except:
-        equation.set(" error ")
-        expression = ""
+# Function to evaluate the expression and update the entry box
+def evaluate_expression():
+    result = calc.equalpress()
+    equation.set(result)
 
 # Function to clear the display
-def clear():
-    global expression
-    expression = ""
-    equation.set("")
-
-# StringVar() to update the entry text field
-equation = tk.StringVar()
+def clear_expression():
+    result = calc.clear()
+    equation.set(result)
 
 # Create the display text entry box
 entry_box = tk.Entry(root, textvariable=equation, font=('arial', 20, 'bold'), bd=10, insertwidth=4, width=14, borderwidth=4)
-entry_box.grid(columnspan=4, padx = 20, pady = 20)
+entry_box.grid(columnspan=4, padx=20, pady=20)
 
 # Create buttons for numbers and operations
 buttons = [
@@ -49,11 +43,11 @@ buttons = [
 
 for (text, row, col) in buttons:
     if text == '=':
-        button = tk.Button(root, text=text, padx=20, pady=20, font=('arial', 20, 'bold'), command=equalpress)
+        button = tk.Button(root, text=text, padx=20, pady=20, font=('arial', 20, 'bold'), command=evaluate_expression)
     elif text == 'C':
-        button = tk.Button(root, text=text, padx=20, pady=20, font=('arial', 20, 'bold'), command=clear)
+        button = tk.Button(root, text=text, padx=20, pady=20, font=('arial', 20, 'bold'), command=clear_expression)
     else:
-        button = tk.Button(root, text=text, padx=20, pady=20, font=('arial', 20, 'bold'), command=lambda t=text: press(t))
+        button = tk.Button(root, text=text, padx=20, pady=20, font=('arial', 20, 'bold'), command=lambda t=text: press_button(t))
     
     button.grid(row=row, column=col, sticky="nsew")
 
