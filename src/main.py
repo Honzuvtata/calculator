@@ -1,5 +1,3 @@
-# frontend.py
-
 import tkinter as tk
 from backend import CalculatorBackend
 
